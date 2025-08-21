@@ -5,7 +5,7 @@ import type React from "react"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
-import { Heart, MapPin, Bed, Bath, Square, ChevronLeft, ChevronRight, MessageCircle } from "lucide-react"
+import { Heart, MapPin, BedDouble, Package, Car, Bath, Square, ChevronLeft, ChevronRight, MessageCircle, Warehouse } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 import { useState } from "react"
@@ -96,21 +96,29 @@ export function PropertyCard({ property }: PropertyCardProps) {
             <MapPin className="h-4 w-4 mr-1" />
             <span className="line-clamp-1">{property.location}</span>
           </div>
-
           <div className="flex items-center space-x-4 text-sm">
-            <div className="flex items-center">
-              <Bed className="h-4 w-4 mr-1" />
-              <span>{property.bedrooms} hab</span>
-            </div>
-            <div className="flex items-center">
-              <Bath className="h-4 w-4 mr-1" />
-              <span>{property.bathrooms} baños</span>
-            </div>
             <div className="flex items-center">
               <Square className="h-4 w-4 mr-1" />
               <span>{property.area} m²</span>
             </div>
+            <div className="flex items-center">
+              <Car className="h-4 w-4 mr-1" />
+              <span>{property.garage} Parq</span>
+            </div>
+            <div className="flex items-center">
+              <Warehouse className="h-4 w-4 mr-1" />
+              <span>{property.storageroom} C.Util</span>
+            </div>
+            <div className="flex items-center">
+              <BedDouble className="h-4 w-4 mr-1" />
+              <span>{property.bedrooms} Habs</span>
+            </div>
+            <div className="flex items-center">
+              <Bath className="h-4 w-4 mr-1" />
+              <span>{property.bathrooms} Baños</span>
+            </div>
           </div>
+
 
           <p className="text-sm text-muted-foreground line-clamp-2">{property.description}</p>
 
@@ -120,7 +128,7 @@ export function PropertyCard({ property }: PropertyCardProps) {
             </Link>
             <Button variant="outline" className="w-full bg-transparent" size="sm" asChild>
               <a
-                href={`https://wa.me/5551234567?text=Hola%2C%20me%20interesa%20esta%20propiedad%3A%20${encodeURIComponent(property.title)}%20-%20%24${property.price.toLocaleString()}`}
+                href={`https://wa.me/573104161610?text=Hola%2C%20me%20interesa%20esta%20propiedad%3A%20${encodeURIComponent(property.title)}%20-%20%24${property.price.toLocaleString()}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center justify-center"

@@ -22,12 +22,12 @@ export function Header() {
             {/* <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
               About
             </Link> */}
+            <Link href="cerradas" className="text-sm font-medium hover:text-primary transition-colors">
+              Cerradas
+            </Link>
             <Link href="/amortization" className="text-sm font-medium hover:text-primary transition-colors">
               Cálcula tu préstamo
             </Link>
-            {/* <Link href="#" className="text-sm font-medium hover:text-primary transition-colors">
-              Contact
-            </Link> */}
           </nav>
 
           <div className="flex items-center space-x-4">

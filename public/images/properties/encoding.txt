@@ -1,0 +1,4 @@
+Zona|Zona_id 
+Zona Occidente|1
+Zona Sur|2
+Zona Oriente|3

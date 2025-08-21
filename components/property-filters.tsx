@@ -87,7 +87,8 @@ export function PropertyFilters() {
               <SelectValue placeholder="Seleccionar ubicación" />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="centro">Zona Centro</SelectItem>
+              {/* <SelectItem value="centro">Zona Centro</SelectItem> */}
+              <SelectItem value="occidente">Zona Occidente</SelectItem>
               {/* <SelectItem value="norte">Zona Sur</SelectItem> */}
               <SelectItem value="sur">Zona Sur</SelectItem>
               <SelectItem value="este">Zona Oriente</SelectItem>

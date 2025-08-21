@@ -12,6 +12,8 @@ import {
   Calendar,
   Phone,
   Heart,
+  Warehouse,
+  Car,
   Share2,
   ChevronLeft,
   ChevronRight,
@@ -123,6 +125,18 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
 
             <div className="flex items-center space-x-6 mb-6">
               <div className="flex items-center">
+                <Square className="h-5 w-5 mr-2" />
+                <span className="font-medium">{property.area} m²</span>
+              </div>
+              <div className="flex items-center">
+                <Car className="h-5 w-5 mr-2" />
+                <span className="font-medium">{property.garage} Parq.</span>
+              </div>
+              <div className="flex items-center">
+                <Warehouse className="h-5 w-5 mr-2" />
+                <span className="font-medium">{property.storageroom} C.Útil</span>
+              </div>
+              <div className="flex items-center">
                 <Bed className="h-5 w-5 mr-2" />
                 <span className="font-medium">{property.bedrooms} Habitaciones</span>
               </div>
@@ -131,12 +145,8 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
                 <span className="font-medium">{property.bathrooms} Baños</span>
               </div>
               <div className="flex items-center">
-                <Square className="h-5 w-5 mr-2" />
-                <span className="font-medium">{property.area} m²</span>
-              </div>
-              <div className="flex items-center">
                 <Calendar className="h-5 w-5 mr-2" />
-                <span className="font-medium">Construido {property.yearBuilt}</span>
+                <span className="font-medium">Construido en {property.yearBuilt}</span>
               </div>
             </div>
           </div>
@@ -175,13 +185,13 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
           <Card className="sticky top-8">
             <CardHeader>
               <CardTitle className="text-2xl text-primary">${property.price.toLocaleString()}</CardTitle>
-              <p className="text-sm text-muted-foreground">${Math.round(property.price / property.area)}/m²</p>
+              <p className="text-sm text-muted-foreground">  ${new Intl.NumberFormat("es-CO").format(Math.round(property.price / property.area))}/m²</p>
             </CardHeader>
             <CardContent className="space-y-4">
               <div className="space-y-3">
                 <Button className="w-full" size="lg" asChild>
                   <a
-                    href={`https://wa.me/5551234567?text=Hola%2C%20estoy%20interesado%20en%20la%20propiedad%3A%20${encodeURIComponent(property.title)}%20-%20%24${property.price.toLocaleString()}%0A%0A%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F`}
+                    href={`https://wa.me/573104161610?text=Hola%2C%20estoy%20interesado%20en%20la%20propiedad%3A%20${encodeURIComponent(property.title)}%20-%20%24${property.price.toLocaleString()}%0A%0A%C2%BFPodr%C3%ADan%20darme%20m%C3%A1s%20informaci%C3%B3n%3F`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center"
@@ -192,7 +202,7 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
                 </Button>
                 <Button className="w-full" size="lg" asChild>
                   <a
-                    href={`https://wa.me/5551234567?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20visita%20para%20la%20propiedad%3A%20${encodeURIComponent(property.title)}%20en%20${encodeURIComponent(property.location)}%0A%0A%C2%BFCu%C3%A1ndo%20estar%C3%ADa%20disponible%3F`}
+                    href={`https://wa.me/573104161610?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20visita%20para%20la%20propiedad%3A%20${encodeURIComponent(property.title)}%20en%20${encodeURIComponent(property.location)}%0A%0A%C2%BFCu%C3%A1ndo%20estar%C3%ADa%20disponible%3F`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center"
@@ -212,7 +222,7 @@ export function PropertyDetails({ property }: PropertyDetailsProps) {
                     <span className="font-semibold text-primary">M2</span>
                   </div>
                   <div>
-                    <p className="font-medium">M2 Propiedades</p>
+                    <p className="font-medium">Jorge Eliécer Moscoso</p>
                     <p className="text-sm text-muted-foreground">Agente Inmobiliario</p>
                   </div>
                 </div>
